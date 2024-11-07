@@ -6,7 +6,8 @@ const cors=require('cors')
 const app=express()
 app.use(express.json())
 app.use(cors({origin:'*'}))
-mongoose.connect( "mongodb+srv://nalamsravani:nalamsravani@cluster0.x9kmw.mongodb.net/").then(
+const mogodbUrl=process.env.MONGO_URL
+mongoose.connect( mogodbUrl).then(
     ()=>console.log("DB success")).catch(err=>console.log(err))
 
 app.post('/addTodo',async(req,res)=>{
