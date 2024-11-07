@@ -22,14 +22,14 @@ const App = () => {
       // console.log(data)
   }
   function handleDelete(id){
-      fetch(`http://localhost:4000/delete/${id}`,{
+      fetch(`https://todo-mern-668f.onrender.com/delete/${id}`,{
         method:'DELETE',
       }).then(res=>res.json()).then(data=>setTodos(data))
   }
   function handleSubmit(e){
     e.preventDefault()
     if(iptodo && isedit){
-       fetch(`http://localhost:4000/edit/${isedit}`,{
+       fetch(`https://todo-mern-668f.onrender.com/edit/${isedit}`,{
           method:'PUT',
           headers:{
             "Content-Type":'application/json',
@@ -43,7 +43,7 @@ const App = () => {
    else if(iptodo){
       //  axios.post("http://localhost:5000/addTodo",{todo:iptodo}).
       // then(res=>console.log(res.data))
-      fetch("http://localhost:4000/addTodo",{
+      fetch("https://todo-mern-668f.onrender.com/addTodo",{
         method:'POST',
         headers:{
           'Content-Type': 'application/json',
