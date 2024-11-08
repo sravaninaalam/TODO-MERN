@@ -71,8 +71,8 @@ const App = () => {
          
          <h2>{item.todo}</h2>
          <div >
-              <button onClick={()=>handleDelete(item._id)}>delete</button>
-             <button style={{backgroundColor:'yellow',padding:'5px 5px',margin:'10px'}}
+              <button onClick={()=>handleDelete(item._id)} style={{cursor:"pointer"}}>delete</button>
+             <button  style={{backgroundColor:'yellow',padding:'5px 5px',margin:'10px',cursor:"pointer"}}
              onClick={()=>handleEdit(item._id)}>Edit</button>
          </div>
 
