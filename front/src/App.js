@@ -16,7 +16,7 @@ const App = () => {
 
   },[iptodo])
   async function getTodos(){
-      const res=await fetch('http://localhost:4000/')
+      const res=await fetch('https://todo-mern-668f.onrender.com/')
       const data=await res.json()
       setTodos(data)
       // console.log(data)
